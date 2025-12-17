@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class Client {
 
-	private static final Logger logger = Logger.getLogger(Client.class.getName());
+	private final Logger logger = Logger.getLogger(Client.class.getName());
 
 	private String nomClient;
 	private int numClient;
