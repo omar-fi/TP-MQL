@@ -16,7 +16,7 @@ public class Client {
 	private String nomClient;
 	private int numClient;
 	private String prenomClient;
-	public  final List<Compte> mCompte=new ArrayList<Compte>();
+	protected  static final List<Compte> mCompte=new ArrayList<Compte>();
 	
 	
 	public Client(String nomClient, int numClient, String prenomClient) {
