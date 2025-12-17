@@ -35,9 +35,13 @@ public class Client {
 		logger.info("le nom du client:"+getNomClient());
 		logger.info("le pr nom du client:"+getPrenomClient());
 		logger.info("------- Les comptes bancaires associ s : --------");
-		for(int i=0;i<mCompte.size();i++) {
-			logger.info(mCompte.get(i).toString());
+		for (int i = 0; i < mCompte.size(); i++) {
+			Compte compte = mCompte.get(i);
+			if (compte != null) {
+				logger.info(compte.toString());
+			}
 		}
+
 	}
 
 	public String getNomClient(){
