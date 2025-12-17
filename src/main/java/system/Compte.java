@@ -35,9 +35,6 @@ public class Compte {
 
 
 
-	public void finalize() throws Throwable {
-
-	}
 
 	
 

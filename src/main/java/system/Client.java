@@ -26,9 +26,7 @@ public class Client {
 
 	}
 
-	public void finalize() throws Throwable {
 
-	}
 
 	public void afficherClient(){
 		System.out.println(" nom du client:"+getNomClient());
