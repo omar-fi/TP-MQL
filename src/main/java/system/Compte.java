@@ -9,9 +9,9 @@ import java.util.Date;
  */
 public class Compte {
 
-	private Date DateCreation;
-	private int NumCompte;
-	private float Solde=0;
+	private Date dateCreation;
+	private int numCompte;
+	private float solde=0;
 
 	public Compte(){
 
@@ -21,16 +21,16 @@ public class Compte {
 
 	public Compte(Date dateCreation, int numCompte, float solde) {
 		super();
-		DateCreation = dateCreation;
-		NumCompte = numCompte;
-		Solde = solde;
+		this.dateCreation = dateCreation;
+		this.numCompte = numCompte;
+		this.solde = solde;
 	}
 
 
 
 	@Override
 	public String toString() {
-		return "Compte crée le " + DateCreation + ", NumCompte=" + NumCompte + ", Solde=" + Solde + "]";
+		return "Compte crée le " + dateCreation + ", NumCompte=" + numCompte + ", Solde=" + solde + "]";
 	}
 
 
@@ -43,20 +43,20 @@ public class Compte {
 	 * @param newVal
 	 */
 	public void debiter(float newVal){
-		if (Solde>=newVal) setSolde(Solde-newVal);
+		if (solde>=newVal) setSolde(solde-newVal);
 
 	}
 
 	public Date getDateCreation(){
-		return DateCreation;
+		return dateCreation;
 	}
 
 	public int getNumCompte(){
-		return NumCompte;
+		return numCompte;
 	}
 
 	public float getSolde(){
-		return Solde;
+		return solde;
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Compte {
 	 * @param newVal
 	 */
 	public void setDateCreation(Date newVal){
-		DateCreation = newVal;
+		dateCreation = newVal;
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class Compte {
 	 * @param newVal
 	 */
 	public void setNumCompte(int newVal){
-		NumCompte = newVal;
+		numCompte = newVal;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class Compte {
 	 * @param newVal
 	 */
 	public void setSolde(float newVal){
-		if (newVal>=0) Solde = newVal;
+		if (newVal>=0) solde = newVal;
 	}
 	
 	/**
@@ -88,7 +88,7 @@ public class Compte {
 	 * @param newVal
 	 */
 	public void crediter(float newVal){
-		setSolde(Solde+newVal);
+		setSolde(solde+newVal);
 
 	}
 

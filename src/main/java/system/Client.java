@@ -14,7 +14,7 @@ public class Client {
 	private String nomClient;
 	private int numClient;
 	private String prenomClient;
-	public List<Compte> mCompte=new ArrayList<Compte>();
+	public  final List<Compte> mCompte=new ArrayList<Compte>();
 	
 	
 	public Client(String nomClient, int numClient, String prenomClient) {
@@ -34,7 +34,7 @@ public class Client {
 		System.out.println("le pr nom du client:"+getPrenomClient());
 		System.out.println("------- Les comptes bancaires associ s : --------");
 		for(int i=0;i<mCompte.size();i++)
-		System.out.println(mCompte.get(i).toString());
+		 System.out.println(mCompte.get(i).toString());
 
 	}
 
