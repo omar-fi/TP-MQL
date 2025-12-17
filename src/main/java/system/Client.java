@@ -2,6 +2,8 @@ package system;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
 /**
  * @author emsi
  * @version 1.0
@@ -9,7 +11,7 @@ import java.util.List;
  */
 public class Client {
 
-
+	private static final Logger logger = Logger.getLogger(Client.class.getName());
 
 	private String nomClient;
 	private int numClient;
@@ -29,13 +31,13 @@ public class Client {
 
 
 	public void afficherClient(){
-		System.out.println(" nom du client:"+getNomClient());
-		System.out.println("le nom du client:"+getNomClient());
-		System.out.println("le pr nom du client:"+getPrenomClient());
-		System.out.println("------- Les comptes bancaires associ s : --------");
-		for(int i=0;i<mCompte.size();i++)
-		 System.out.println(mCompte.get(i).toString());
-
+		logger.info(" nom du client:"+getNomClient());
+		logger.info("le nom du client:"+getNomClient());
+		logger.info("le pr nom du client:"+getPrenomClient());
+		logger.info("------- Les comptes bancaires associ s : --------");
+		for(int i=0;i<mCompte.size();i++) {
+			logger.info(mCompte.get(i).toString());
+		}
 	}
 
 	public String getNomClient(){
