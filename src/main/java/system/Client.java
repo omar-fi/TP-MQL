@@ -11,16 +11,16 @@ public class Client {
 
 
 
-	private String NomClient;
-	private int NumClient;
-	private String PrenomClient;
-	public List<Compte> m_Compte=new ArrayList<Compte>();
+	private String nomClient;
+	private int numClient;
+	private String prenomClient;
+	public List<Compte> mCompte=new ArrayList<Compte>();
 	
 	
 	public Client(String nomClient, int numClient, String prenomClient) {
-		NomClient = nomClient;
-		NumClient = numClient;
-		PrenomClient = prenomClient;
+		this.nomClient = nomClient;
+		this.numClient = numClient;
+		this.prenomClient = prenomClient;
 	}
 	public Client(){
 
@@ -35,21 +35,21 @@ public class Client {
 		System.out.println("le nom du client:"+getNomClient());
 		System.out.println("le pr nom du client:"+getPrenomClient());
 		System.out.println("------- Les comptes bancaires associ s : --------");
-		for(int i=0;i<m_Compte.size();i++)
-		System.out.println(m_Compte.get(i).toString());
+		for(int i=0;i<mCompte.size();i++)
+		System.out.println(mCompte.get(i).toString());
 
 	}
 
 	public String getNomClient(){
-		return NomClient;
+		return nomClient;
 	}
 
 	public int getNumClient(){
-		return NumClient;
+		return numClient;
 	}
 
 	public String getPrenomClient(){
-		return PrenomClient;
+		return prenomClient;
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class Client {
 	 * @param newVal
 	 */
 	public void setNomClient(String newVal){
-		NomClient = newVal;
+		nomClient = newVal;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class Client {
 	 * @param newVal
 	 */
 	public void setNumClient(int newVal){
-		NumClient = newVal;
+		numClient = newVal;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class Client {
 	 * @param newVal
 	 */
 	public void setPrenomClient(String newVal){
-		PrenomClient = newVal;
+		prenomClient = newVal;
 	}
 
 }
