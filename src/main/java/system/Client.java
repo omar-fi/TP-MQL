@@ -2,6 +2,7 @@ package system;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -30,18 +31,19 @@ public class Client {
 
 
 
-	public void afficherClient(){
-		logger.info(" nom du client:"+getNomClient());
-		logger.info("le nom du client:"+getNomClient());
-		logger.info("le pr nom du client:"+getPrenomClient());
-		logger.info("------- Les comptes bancaires associ s : --------");
-		for (int i = 0; i < mCompte.size(); i++) {
-			Compte compte = mCompte.get(i);
+	public void afficherClient() {
+		logger.info("Nom du client : " + getNomClient());
+		logger.info("Prénom du client : " + getPrenomClient());
+		logger.info("------- Les comptes bancaires associés : --------");
+
+		// Utilisation d'une boucle for-each pour plus de clarté
+		for (Compte compte : mCompte) {
 			if (compte != null) {
-				logger.info(compte.toString());
+				// Correction de l'alerte SonarQube : on passe l'objet au logger
+				// au lieu d'appeler explicitement .toString()
+				logger.log(Level.INFO, "{0}", compte);
 			}
 		}
-
 	}
 
 	public String getNomClient(){
